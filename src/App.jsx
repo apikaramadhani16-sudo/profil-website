@@ -5,7 +5,6 @@ import Dashboard from './pages/Dashboard';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // Jika belum login tampilkan halaman Login (Stitch), jika sudah tampilkan Dashboard utama
   return (
     <div>
       {isLoggedIn ? (
