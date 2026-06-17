@@ -2,6 +2,8 @@ import React from 'react';
 import risetkeyword from '../assets/risetkeyword.png';
 import fotoNavy from '../assets/Navy.jpeg';
 import fotoAraa from '../assets/Araa.jpeg';
+import fotoDwi from '../assets/dwi.jpeg';
+import fotoCindy from '../assets/cindy.jpeg';
 export default function Dashboard() {
   
   // Fungsi otomatis scroll berdasarkan ID section
@@ -19,7 +21,7 @@ export default function Dashboard() {
       name: "Cindy Safa Avika Ramadhani",
       Sekolah: "SMK Negeri 12 MALANG",
       ttl: "Malang, 9 September 2008",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60",
+      image: fotoCindy,
       instagram: "https://www.instagram.com/apikaa.c/"
     },
     {
@@ -48,11 +50,11 @@ export default function Dashboard() {
     },
     {
       id: 5,
-      name: "Dwi",
+      name: "Dwi Wardana Saputra",
       sekolah: "SMK NEGERI 4 BOJONEGORO",
       ttl: "Bojonegoro, 9 November 2008",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60",
-      instagram: "https://instagram.com/username5"
+      image: fotoDwi,
+      instagram: "https://www.instagram.com/wrrdna/"
     }
   ];
 
