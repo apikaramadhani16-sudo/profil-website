@@ -4,6 +4,7 @@ import fotoNavy from '../assets/Navy.jpeg';
 import fotoAraa from '../assets/Araa.jpeg';
 import fotoDwi from '../assets/dwi.jpeg';
 import fotoCindy from '../assets/cindy.jpeg';
+import fotoGalih from '../assets/galih.jpeg';
 export default function Dashboard() {
   
   // Fungsi otomatis scroll berdasarkan ID section
@@ -42,11 +43,11 @@ export default function Dashboard() {
     },
     {
       id: 4,
-      name: "Galih",
+      name: "Galih Dwi Happy Prasetyo",
       Sekolah: "SMK Negeri 4 BOJONEGORO",
-      ttl: "Medan, 20 April 2001",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60",
-      instagram: "https://instagram.com/username4"
+      ttl: "Bojonegoro, 05 maret 2009",
+      image: fotoGalih,
+      instagram: "https://www.instagram.com/g.prstyoo_/"
     },
     {
       id: 5,
@@ -137,7 +138,7 @@ export default function Dashboard() {
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-28 h-28 rounded-full mx-auto object-cover mb-5 ring-4 ring-blue-50 shadow-inner"
+                  className="w-30 h-28 rounded-full mx-auto object-cover mb-5 ring-4 ring-blue-50 shadow-inner"
                 />
                 <h3 className="font-bold text-xl text-slate-800 mb-1">{member.name}</h3>
                 <p className="text-xs font-medium text-slate-500 mb-2">{member.Sekolah}</p>
