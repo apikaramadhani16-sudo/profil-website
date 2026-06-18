@@ -1,5 +1,8 @@
 import React from 'react';
 import risetkeyword from '../assets/risetkeyword.png';
+import redesign from '../assets/redesign.png';
+import landingpage from '../assets/landingpage.png';
+import artikel from '../assets/artikel.png';
 import fotoNavy from '../assets/Navy.jpeg';
 import fotoAraa from '../assets/Araa.jpeg';
 import fotoDwi from '../assets/dwi.jpeg';
@@ -77,17 +80,17 @@ export default function Dashboard() {
     {
       id: 2,
       title: "Redesign",
-      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&auto=format&fit=crop&q=60",
+      image: redesign,
     },
     {
       id: 3,
       title: "Artikel Baru",
-      image: "https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=500",
+      image: artikel,
     },
     {
       id: 4,
       title: "Landing Page",
-      image: "https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=500",
+      image: landingpage,
     }
   ];
 
@@ -214,8 +217,9 @@ export default function Dashboard() {
       {/* 7. SECTION HASIL PORTOFOLIO */}
       <section id="portfolio-section" className="container mx-auto px-4 pt-24 scroll-mt-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-slate-900">Hasil Portofolio</h2>
-          <p className="text-slate-500 mt-2">Karya nyata berkualitas tinggi yang berhasil kami rampungkan</p>
+          <h2 className="text-3xl font-extrabold text-slate-900">Hasil Portofolio team website</h2>
+          <p className="text-slate-500 mt-2">Berbagai hasil pekerjaan yang telah dikerjakan oleh tim, mulai dari riset keyword, 
+             proses redesign website, hingga pembuatan artikel baru untuk meningkatkan kualitas dan performa website.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
