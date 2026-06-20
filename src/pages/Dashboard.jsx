@@ -6,10 +6,9 @@ import fotoDwi from '../assets/dwi.jpeg';
 import fotoCindy from '../assets/cindy.jpeg';
 import fotoGalih from '../assets/galih.jpeg';
 
-// KAMU KURANG 3 BARIS IMPORT INI TADI:
-import redesign from '../assets/araa.jpeg'; // sementara diarahkan ke foto araa dulu biar tidak eror
-import artikel from '../assets/dwi.jpeg';   // sementara diarahkan ke foto dwi dulu biar tidak eror
-import landingpage from '../assets/risetkeyword.png'; // sementara diarahkan ke risetkeyword dulu biar tidak eror
+import redesign from '../assets/redesign.png'; 
+import artikel from '../assets/artikel.png';   
+import landingpage from '../assets/landingpage.png'; 
 
 export default function Dashboard() {
   
