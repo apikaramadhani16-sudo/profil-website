@@ -104,7 +104,7 @@ export default function Dashboard() {
       <section className="bg-white border-b border-slate-100 py-24 text-center px-4">
         <div className="max-w-3xl mx-auto">
           <span className="text-sm font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">
-            Welcome to Our Space
+            LET'S HANG OUT WITH US
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 mt-4 mb-6 leading-tight">
             Yuk Kenalan Sama Tim Website Optimization!
@@ -133,7 +133,7 @@ export default function Dashboard() {
       <section id="members-section" className="container mx-auto px-4 pt-24 scroll-mt-12">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-slate-900">Biodata Anggota Tim</h2>
-          <p className="text-slate-500 mt-2">Para profesional di balik pembuatan projek website ini</p>
+          <p className="text-slate-500 mt-2">Meet the crew! Orang-orang hebat yang siap bawa perubahan lewat dunia digital.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
@@ -194,8 +194,7 @@ export default function Dashboard() {
       <section id="portfolio-section" className="container mx-auto px-4 pt-24 scroll-mt-12">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-slate-900">Website yang Kami Kelola</h2>
-          <p className="text-slate-500 mt-2">Ini adalah website yang kami optimalkan performanya, mulai dari</p>
-          <p className="text-slate-500 mt-1"> pembaruan tampilan, pengelolaan produk, hingga strategi SEO agar lebih mudah ditemukan di Google.</p>
+          <p className="text-slate-500 mt-2">Ini dia beberapa website yang dipercayakan kepada tim kami untuk dioptimalkan!</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -213,6 +212,14 @@ export default function Dashboard() {
                   {item.title}
                 </h3>
                 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl text-sm transition-colors duration-300"
+                  >
+                   Kunjungi Website
+                  </a>
                 </div>
               </div>
             </div>
