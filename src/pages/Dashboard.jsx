@@ -5,6 +5,12 @@ import fotoAraa from '../assets/Araa.jpeg';
 import fotoDwi from '../assets/dwi.jpeg';
 import fotoCindy from '../assets/cindy.jpeg';
 import fotoGalih from '../assets/galih.jpeg';
+
+// KAMU KURANG 3 BARIS IMPORT INI TADI:
+import redesign from '../assets/araa.jpeg'; // sementara diarahkan ke foto araa dulu biar tidak eror
+import artikel from '../assets/dwi.jpeg';   // sementara diarahkan ke foto dwi dulu biar tidak eror
+import landingpage from '../assets/risetkeyword.png'; // sementara diarahkan ke risetkeyword dulu biar tidak eror
+
 export default function Dashboard() {
   
   // Fungsi otomatis scroll berdasarkan ID section
@@ -77,17 +83,17 @@ export default function Dashboard() {
     {
       id: 2,
       title: "Redesign",
-      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&auto=format&fit=crop&q=60",
+      image: redesign,
     },
     {
       id: 3,
       title: "Artikel Baru",
-      image: "https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=500",
+      image: artikel,
     },
     {
       id: 4,
       title: "Landing Page",
-      image: "https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=500",
+      image: landingpage,
     }
   ];
 
