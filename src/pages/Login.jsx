@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoStitch from '../assets/stich.png';
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
@@ -17,11 +18,13 @@ function Login({ onLogin }) {
         
         {/* Header Logo & Judul */}
         <div className="text-center mb-8">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-900 text-white font-bold text-xl">
-            TO
-          </div>
-          <h2 className="text-2xl font-bold text-slate-900">Tech Optimization</h2>
-          <p className="text-sm text-slate-500 mt-1">Silakan masuk ke Sistem Informasi Tim</p>
+          <img 
+            src={logoStitch} 
+            alt="Stitch Logo" 
+            className="w-24 h-24 mx-auto mb-4 object-contain" 
+          />
+          <h2 className="text-2xl font-bold text-slate-900">Selamat Datang di Ruang Kami!</h2>
+          <p className="text-sm text-slate-500 mt-1">Yuk, login sebentar untuk mengintip keseruan dan hasil kerja keras tim optimasi website.</p>
         </div>
 
         {/* Form Input */}
@@ -72,10 +75,10 @@ function Login({ onLogin }) {
 
         {/* Opsi Login Institusi */}
         <div className="grid grid-cols-2 gap-3">
-          <button type="button" className="flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 transition">
+          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl text-sm border border-transparent transition-colors">
             Google Workspace
           </button>
-          <button type="button" className="flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 transition">
+          <button className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:opacity-90 text-white font-medium py-2.5 px-4 rounded-xl text-sm transition-opacity shadow-sm">
             Instagram Auth
           </button>
         </div>

@@ -10,6 +10,10 @@ import redesign from '../assets/redesign.png';
 import artikel from '../assets/artikel.png';   
 import landingpage from '../assets/landingpage.png'; 
 
+import logoOyt from '../assets/oyt.jpeg';
+import logoWpi from '../assets/wpi.jpeg';
+import logoTeriour from '../assets/teriour.jpeg';
+
 export default function Dashboard() {
   
   // Fungsi otomatis scroll berdasarkan ID section
@@ -74,28 +78,25 @@ export default function Dashboard() {
 
   // 3. Data Portofolio (Hasil Pekerjaan)
   const portfolios = [
-    {
-      id: 1,
-      title: "Riset Keyword",
-      image: risetkeyword,
-    },
-    {
-      id: 2,
-      title: "Redesign",
-      image: redesign,
-    },
-    {
-      id: 3,
-      title: "Artikel Baru",
-      image: artikel,
-    },
-    {
-      id: 4,
-      title: "Landing Page",
-      image: landingpage,
-    }
-  ];
-
+  {
+    id: 1,
+    title: "Oyitok Group",
+    image: logoOyt,
+    link: "https://oyitokgroup.com/" // Sesuaikan dengan URL aslinya
+  },
+  {
+    id: 2,
+    title: "Wallpaper Indonesia",
+    image: logoWpi,
+    link: "https://wallpaperindonesia.id/" // Sesuaikan dengan URL aslinya
+  },
+  {
+    id: 3,
+    title: "Teriour",
+    image: logoTeriour,
+    link: "https://teriour.com/" // Sesuaikan dengan URL aslinya
+  }
+];
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-24 selection:bg-blue-500 selection:text-white">
       
@@ -106,11 +107,10 @@ export default function Dashboard() {
             Welcome to Our Space
           </span>
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 mt-4 mb-6 leading-tight">
-            Profil Kreatif & Profesional <br/>
-            <span className="text-blue-600">Tim Pengembang Website</span>
+            Yuk Kenalan Sama Tim Website Optimization!
           </h1>
           <p className="text-slate-600 text-lg leading-relaxed mb-10">
-             bertugas meningkatkan kualitas website agar lebih mudah muncul di pencarian Google. Pada bagian On-Page, 
+             Optimization Website bertugas meningkatkan kualitas website agar lebih mudah muncul di pencarian Google. Pada bagian On-Page, 
              penulis melakukan riset kata kunci (keyword) untuk membuat artikel baru yang menarik, serta melakukan redesain 
              artikel lama dan memperbaiki tampilan landing page menggunakan WordPress. Sedangkan pada bagian Off-Page, penulis 
              membantu memperkuat reputasi website dengan cara membangun backlink melalui pemberian komentar yang relevan di situs-situs lain.
@@ -121,7 +121,7 @@ export default function Dashboard() {
             onClick={() => scrollToSection('members-section')}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 inline-flex items-center gap-2"
           >
-            Lihat Biodata Anggota Tim
+            Let’s Explore!
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-6l-7 7-7-7" />
             </svg>
@@ -171,8 +171,8 @@ export default function Dashboard() {
       {/* 5. SECTION 4 MACAM PEKERJAAN KAMI */}
       <section id="tasks-section" className="container mx-auto px-4 pt-24 scroll-mt-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-slate-900">4 Macam Pekerjaan Kami</h2>
-          <p className="text-slate-500 mt-2">Spesialisasi dan fokus utama tanggung jawab tim kami</p>
+          <h2 className="text-3xl font-extrabold text-slate-900">4Apa Saja yang Kami Kerjakan?</h2>
+          <p className="text-slate-500 mt-2">Fokus dan tanggung jawab utama tim kami sehari-hari untuk menjaga performa website.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -193,18 +193,21 @@ export default function Dashboard() {
       {/* 7. SECTION HASIL PORTOFOLIO */}
       <section id="portfolio-section" className="container mx-auto px-4 pt-24 scroll-mt-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-slate-900">Hasil Portofolio</h2>
-          <p className="text-slate-500 mt-2">Karya nyata berkualitas tinggi yang berhasil kami rampungkan</p>
+          <h2 className="text-3xl font-extrabold text-slate-900">Website yang Kami Kelola</h2>
+          <p className="text-slate-500 mt-2">Ini adalah website yang kami optimalkan performanya, mulai dari</p>
+          <p className="text-slate-500 mt-1"> pembaruan tampilan, pengelolaan produk, hingga strategi SEO agar lebih mudah ditemukan di Google.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {portfolios.map((item) => (
             <div key={item.id} className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
               <img 
-                src={item.image} 
-                alt={item.title} 
-                className="w-full h-52 object-cover"
+              src={item.image} 
+              alt={item.title} 
+              className="w-full h-40 mx-auto object-cover"
               />
+              </a>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-slate-900 mt-4 mb-2">
                   {item.title}
