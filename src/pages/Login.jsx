@@ -24,7 +24,7 @@ function Login({ onLogin }) {
             className="w-24 h-24 mx-auto mb-4 object-contain" 
         />
           <h2 className="text-2xl font-bold text-slate-900">Selamat Datang di Ruang Kami!</h2>
-          <p className="text-sm text-slate-500 mt-1">Yuk, login sebentar untuk mengintip keseruan dan hasil kerja keras tim optimasi website.</p>
+          <p className="text-sm text-slate-500 mt-1">Yuk, login sebentar untuk mengintip keseruan dan hasil kerja keras tim Optimization Website.</p>
         </div>
 
         {/* Form Input */}
