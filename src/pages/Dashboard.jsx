@@ -166,19 +166,6 @@ export default function Dashboard() {
             </div>
           ))}
         </div>
-
-        {/* 4. BUTTON PEKERJAAN KAMI */}
-        <div className="mt-16 text-center">
-          <button 
-            onClick={() => scrollToSection('tasks-section')}
-            className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all duration-300 inline-flex items-center gap-2"
-          >
-            Lihat Pekerjaan Kami
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-        </div>
       </section>
 
       {/* 5. SECTION 4 MACAM PEKERJAAN KAMI */}
@@ -200,19 +187,6 @@ export default function Dashboard() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* 6. BUTTON UNTUK PORTOFOLIO */}
-        <div className="mt-16 text-center">
-          <button 
-            onClick={() => scrollToSection('portfolio-section')}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all duration-300 inline-flex items-center gap-2"
-          >
-            Buka Portofolio Tim
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
         </div>
       </section>
 
