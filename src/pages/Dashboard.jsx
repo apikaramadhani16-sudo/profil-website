@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import risetkeyword from '../assets/risetkeyword.png';
 import fotoNavy from '../assets/Navy.jpeg';
 import fotoAraa from '../assets/Araa.jpeg';
@@ -11,7 +11,7 @@ import artikel from '../assets/artikel.png';
 import landingpage from '../assets/landingpage.png'; 
 
 import logoOyt from '../assets/oyt.jpeg';
-import logoWpi from '../assets/wpi.jpeg';
+import logoWpi from '../assets/wpi.png';
 import logoTeriour from '../assets/teriour.jpeg';
 
 export default function Dashboard() {
@@ -25,48 +25,30 @@ export default function Dashboard() {
   };
 
   // 1. Data Anggota Tim + Link Instagram
-  const amMembers = [
-    {
-      id: 1,
-      name: "Cindy Safa Avika Ramadhani",
-      Sekolah: "SMK Negeri 12 MALANG",
-      ttl: "Malang, 9 September 2008",
-      image: fotoCindy,
-      instagram: "https://www.instagram.com/apikaa.c/"
-    },
-    {
-      id: 2,
-      name: "Yuanita Navy",
-      Sekolah: "SMK NEGERI 3 MALANG",
-      ttl: "Malang, 28 Maret 2009",
-      image: fotoNavy,
-      instagram: "https://www.instagram.com/strrwberies/"
-    },
-    {
-      id: 3,
-      name: "Aura icaa",
-      Sekolah: "SMK Negeri 11 MALANG",
-      ttl: "Malang, 13 Maret 2009",
-      image: fotoAraa,
-      instagram: "https://www.instagram.com/araa_yoo13/"
-    },
-    {
-      id: 4,
-      name: "Galih Dwi Happy Prasetyo",
-      Sekolah: "SMK Negeri 4 BOJONEGORO",
-      ttl: "Bojonegoro, 05 maret 2009",
-      image: fotoGalih,
-      instagram: "https://www.instagram.com/g.prstyoo_/"
-    },
-    {
-      id: 5,
-      name: "Dwi Wardana Saputra",
-      sekolah: "SMK NEGERI 4 BOJONEGORO",
-      ttl: "Bojonegoro, 9 November 2008",
-      image: fotoDwi,
-      instagram: "https://www.instagram.com/wrrdna/"
-    }
-  ];
+ const [amMembers, setAmMembers] = useState([]);
+
+useEffect(() => {
+  fetch('http://127.0.0.1:8000/api/tim')
+    .then((response) => response.json())
+    .then((data) => {
+      // Di sini kita petakan gambar lokal kamu berdasarkan ID dari backend
+      const dataDenganGambar = data.map((member) => {
+        let fotoLokal = member.image;
+        if (member.id === 1) fotoLokal = fotoCindy;
+        if (member.id === 2) fotoLokal = fotoNavy;
+        if (member.id === 3) fotoLokal = fotoAraa;
+        if (member.id === 4) fotoLokal = fotoGalih;
+        if (member.id === 5) fotoLokal = fotoDwi;
+
+        return {
+          ...member,
+          image: fotoLokal
+        };
+      });
+      setAmMembers(dataDenganGambar);
+    })
+    .catch((error) => console.error('Error fetching data:', error));
+}, []);
 
   // 2. Data 4 Macam Pekerjaan
   const bs = [
@@ -171,7 +153,7 @@ export default function Dashboard() {
       {/* 5. SECTION 4 MACAM PEKERJAAN KAMI */}
       <section id="tasks-section" className="container mx-auto px-4 pt-24 scroll-mt-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-slate-900">4Apa Saja yang Kami Kerjakan?</h2>
+          <h2 className="text-3xl font-extrabold text-slate-900">Apa Saja yang Kami Kerjakan?</h2>
           <p className="text-slate-500 mt-2">Fokus dan tanggung jawab utama tim kami sehari-hari untuk menjaga performa website.</p>
         </div>
 
@@ -204,7 +186,7 @@ export default function Dashboard() {
               <img 
               src={item.image} 
               alt={item.title} 
-              className="w-full h-40 mx-auto object-cover"
+              className="w-full h-40 mx-auto object-contain bg-white p-4"
               />
               </a>
               <div className="p-6">
